@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario e información de contacto oficial de QuestPassCR.">
+    <title>Contacto | QuestPassCR</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html">
+            <img src="assets/img/logo.png" alt="Logo de QuestPass CR">
+        </a>
+        <h1>QuestPass-CR</h1>
+        <a href="login.html" class="Login">Login</a>
+
+        <nav aria-label="Navegación principal">
+            <a href="index.html">Index</a>
+            <a href="experiencias.html">Experiencias</a>
+            <a href="reservar.html">Reservar</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="admin.html">Administración</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="grid-2col">
+            <section>
+                <h2>Ponte en contacto</h2>
+                <form action="#" method="post">
+                    <fieldset>
+                        <legend>Envíanos un mensaje</legend>
+
+                        <div class="form-group">
+                            <label for="txtNombre">Nombre completo</label>
+                            <input type="text" id="txtNombre" name="nombre" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="txtCorreo">Correo electrónico</label>
+                            <input type="email" id="txtCorreo" name="correo" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="txtTelefono">Teléfono</label>
+                            <input type="tel" id="txtTelefono" name="telefono">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sltAsunto">Asunto</label>
+                            <select id="sltAsunto" name="asunto" required>
+                                <option value="">Seleccione una opción</option>
+                                <option value="Soporte">Soporte con una compra</option>
+                                <option value="Informacion">Información general</option>
+                                <option value="Organizador">Quiero organizar un evento</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="txtMensaje">Mensaje</label>
+                            <textarea id="txtMensaje" name="mensaje" rows="4" required></textarea>
+                        </div>
+
+                        <button type="submit">Enviar mensaje</button>
+                    </fieldset>
+                </form>
+            </section>
+
+            <section>
+                <h2>Información corporativa</h2>
+                <p><strong>Correo de soporte:</strong> soporte@questpass.cr</p>
+                <br>
+                <p><strong>Teléfono:</strong> +506 2200-8800</p>
+                <br>
+                <p><strong>Oficina principal:</strong> Edificio QuestPass, Paseo Colón, San José, Costa Rica</p>
+                <br>
+                <p><strong>Horario de atención:</strong> Lunes a Viernes de 8:00 a.m. a 6:00 p.m. / Sábados de 9:00 a.m. a 1:00 p.m.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>Pie de página - QuestPassCR - Proyecto académico SOFT-06</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,354 @@
+/*
+   VARIABLES Y PALETA DE COLORES - QUESTPASS CR
+   ========================================================================== */
+:root {
+    --color-primary: #EF968D;       /* Coral principal */
+    --color-primary-dark: #D47A70;  /* Coral oscuro para hover/foco */
+    --color-nav-bg: #F6C0BB;        /* Fondo rosa salmón claro */
+    --color-main-bg: #338FB8;       /* Azul Océano */
+    --color-input-bg: #9CC2D4;      /* Azul pastel claro para campos */
+    --color-text-light: #FFFFFF;    /* Texto blanco */
+    --color-text-dark: #222222;     /* Texto oscuro */
+    --color-card-bg: #FFFFFF;       /* Fondo de contenedores blancos */
+    --font-heading: 'Georgia', serif;
+    --font-body: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Reset y modelo de caja */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-main-bg);
+    color: var(--color-text-light);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* 
+   HEADER Y NAVEGACIÓN
+   ========================================================================== */
+header {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    text-align: center;
+    padding: 1.5rem 1rem 0 1rem;
+}
+
+header h1 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.25rem;
+}
+
+header p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    opacity: 0.95;
+}
+
+/* Navegación principal */
+nav[aria-label="Navegación principal"] {
+    background-color: var(--color-nav-bg);
+    padding: 0.75rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+nav[aria-label="Navegación principal"] a {
+    background-color: var(--color-primary-dark);
+    color: var(--color-text-light);
+    text-decoration: none;
+    padding: 0.5rem 1.25rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease, outline 0.2s ease;
+}
+
+nav[aria-label="Navegación principal"] a:hover {
+    background-color: #B85F56;
+}
+
+.Login{
+    display: flex;
+    background-color: var(--color-primary-dark);
+    width: max-content;
+    color: var(--color-text-light);
+    justify-content: right;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-left: auto;
+    text-align: right;
+    text-decoration: none;
+}
+
+/* Estado de foco visible (Req. 13) */
+a:focus, button:focus, input:focus, select:focus, textarea:focus {
+    outline: 3px solid #FFE600 !important;
+    outline-offset: 3px;
+}
+
+/* 
+   MAIN Y CONTENIDO PRINCIPAL
+   ========================================================================== */
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+}
+
+main h1, main h2, main h3 {
+    font-family: var(--font-heading);
+    margin-bottom: 1rem;
+    color: var(--color-text-light);
+}
+
+section, article {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+section, div, article, a {
+    font-family: var(--font-heading);
+    margin-bottom: 1rem;
+    color: var(--color-text-light);
+    text-decoration: none;
+    text-align: left;
+}
+
+.Link-detalle{
+    color: var(--color-text-light);
+    font-size: medium;
+}
+/* 
+   FORMULARIOS Y CAMPOS
+   ========================================================================== */
+fieldset {
+    border: 2px solid var(--color-nav-bg);
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+legend {
+    font-family: var(--font-heading);
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 0 0.5rem;
+    color: var(--color-text-light);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+    color: var(--color-text-light);
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.65rem 0.85rem;
+    background-color: var(--color-input-bg);
+    border: 1px solid #7FA8BC;
+    border-radius: 4px;
+    color: var(--color-text-dark);
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #4A5568;
+}
+.boton-detalle {
+    display: inline-block; 
+    background-color: var(--color-primary); 
+    color: white; 
+    padding: 0.75rem 1.5rem; 
+    text-decoration: none; 
+    font-weight: bold; 
+    border-radius: 4px;
+}
+
+button {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--color-primary-dark);
+}
+
+button[type="reset"] {
+    background-color: #6C757D;
+    margin-left: 0.5rem;
+}
+
+/* 
+   TABLAS RESPONSIVAS
+   ========================================================================== */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--color-card-bg);
+    color: var(--color-text-dark);
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+caption {
+    font-weight: bold;
+    padding: 0.5rem;
+    color: var(--color-text-light);
+    caption-side: top;
+    text-align: left;
+}
+
+th, td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #E2E8F0;
+}
+.td-admin-reserva{
+    display: inline-block; 
+    background-color: white;
+    color: var(--color-text-dark); 
+    padding: 0.75rem 1.5rem; 
+    text-decoration: none; 
+    font-weight: bold; 
+    border-radius: 4px;
+}
+th {
+    background-color: var(--color-nav-bg);
+    color: var(--color-text-dark);
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #F8FAFC;
+}
+
+td button {
+    padding: 0.35rem 0.65rem;
+    font-size: 0.85rem;
+    margin-right: 0.25rem;
+}
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+/* 
+   FOOTER
+   ========================================================================== */
+footer {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    text-align: center;
+    padding: 1.25rem 1rem;
+    margin-top: auto;
+    font-weight: 500;
+}
+
+/* 
+   BREAKPOINTS RESPONSIVOS
+   ========================================================================== */
+
+/* Breakpoint Móvil (< 768px) */
+@media (max-width: 767px) {
+    header h1 {
+        font-size: 1.75rem;
+    }
+
+    nav[aria-label="Navegación principal"] {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav[aria-label="Navegación principal"] a {
+        text-align: center;
+    }
+
+    .grid-2col {
+        display: flex;
+        flex-direction: column;
+    }
+
+    th, td {
+        padding: 0.5rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* Breakpoint Escritorio (>= 768px) */
+@media (min-width: 768px) {
+    header {
+        padding: 2rem 2rem 0 2rem;
+    }
+
+    header h1 {
+        font-size: 2.8rem;
+    }
+
+    nav[aria-label="Navegación principal"] {
+        justify-content: center;
+    }
+
+    .grid-2col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .event-detail-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: start;
+    }
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Panel de administración de experiencias y reservas de QuestPassCR.">
+    <title>Administración | QuestPassCR</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html">
+            <img src="assets/img/logo.png" alt="Logo de QuestPass CR">
+        </a>
+        <h1>Panel de Administración - QuestPassCR</h1>
+
+        <nav aria-label="Navegación principal">
+            <a href="index.html">Index</a>
+            <a href="experiencias.html">Experiencias</a>
+            <a href="reservar.html">Reservar</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="admin.html">Administración</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SECCIÓN 1: EXPERIENCIAS -->
+        <section id="experiencias">
+            <h2>Experiencias</h2>
+
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Gestionar experiencia</legend>
+
+                    <div class="grid-2col">
+                        <div class="form-group">
+                            <label for="txtCodigo">Código</label>
+                            <input type="text" id="txtCodigo" name="codigo" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="txtNombre">Nombre de la experiencia</label>
+                            <input type="text" id="txtNombre" name="nombre" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sltModalidad">Modalidad</label>
+                            <select id="sltModalidad" name="modalidad" required>
+                                <option value="">Seleccione una modalidad</option>
+                                <option value="Presencial">Presencial</option>
+                                <option value="Virtual">Virtual</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="txtFecha">Fecha</label>
+                            <input type="date" id="txtFecha" name="fecha" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="numCupos">Cupos</label>
+                            <input type="number" id="numCupos" name="cupos" min="1" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="txtPrecio">Precio (₡)</label>
+                            <input type="number" id="txtPrecio" name="precio" min="0" step="500" required>
+                        </div>
+                    </div>
+
+                    <button type="submit">Guardar experiencia</button>
+                    <button type="reset">Limpiar</button>
+                </fieldset>
+            </form>
+
+            <br>
+
+            <div class="table-container">
+                <table>
+                    <caption>Registro oficial de experiencias</caption>
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Experiencia</th>
+                            <th>Fecha</th>
+                            <th>Cupos</th>
+                            <th>Precio</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>QST-001</td>
+                            <td>Caminata Nocturna & Microclima</td>
+                            <td>11/10/2026</td>
+                            <td>10</td>
+                            <td>₡10.000</td>
+                            <td>
+                                <button type="button">Editar</button>
+                                <button type="button">Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>QST-002</td>
+                            <td>Day Pass & Termales en La Fortuna</td>
+                            <td>03/10/2026</td>
+                            <td>30</td>
+                            <td>₡22.000</td>
+                            <td>
+                                <button type="button">Editar</button>
+                                <button type="button">Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>QST-003</td>
+                            <td> Tour de Café & Cata Sensorial</td>
+                            <td>17/10/2026</td>
+                            <td>15</td>
+                            <td>₡15.000</td>
+                            <td>
+                                <button type="button">Editar</button>
+                                <button type="button">Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>QST-004</td>
+                            <td>Rafting Express en el Río Pacuare</td>
+                            <td>07/11/2026</td>
+                            <td>25</td>
+                            <td>₡12.000</td>
+                            <td>
+                                <button type="button">Editar</button>
+                                <button type="button">Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>QST-005</td>
+                            <td>Atardecer en Kayak & Bioluminiscencia</td>
+                            <td>21/11/2026</td>
+                            <td>40</td>
+                            <td>₡20.000</td>
+                            <td>
+                                <button type="button">Editar</button>
+                                <button type="button">Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>QST-006</td>
+                            <td>Taller de Cerámica & Glamping</td>
+                            <td>05/12/2026</td>
+                            <td>18</td>
+                            <td>₡25.000</td>
+                            <td>
+                                <button type="button">Editar</button>
+                                <button type="button">Eliminar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: RESERVAS -->
+        <section id="reservas">
+            <h2>Reservas</h2>
+
+            <div class="table-container">
+                <table>
+                    <caption>Listado de reservas solicitadas</caption>
+                    <thead>
+                        <tr>
+                            <th>ID Reserva</th>
+                            <th>Cliente</th>
+                            <th>Correo</th>
+                            <th>Experiencia</th>
+                            <th>Cantidad</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="td-admin-reserva">Aún no hay reservas registradas</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Pie de página - QuestPassCR - Proyecto académico SOFT-06</p>
+    </footer>
+
+</body>
+</html>

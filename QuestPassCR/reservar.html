@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Formulario de reserva de experiencias en QuestPassCR">
+    <meta name="keywords" content="QuestPassCR, reservar, user">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservar | QuestPassCR</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="assets/img/logo.png" alt="Logo de QuestPass CR">
+        </a>
+        <h1>QuestPass-CR</h1>
+        <nav aria-label="Navegacion inicio sesión" class="login-button">
+            <a href="login.html" class="Login">Login</a>
+        </nav>
+        <nav aria-label="Navegación principal">
+            <a href="index.html">Index</a>
+            <a href="experiencias.html">Experiencias</a>
+            <a href="reservar.html">Reservar</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="admin.html">Administración</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2 id="titulo-reservar">Reservar experiencia</h2>
+
+        <form action="#" method="post" class="reserve-grid-layout">
+            
+            <!-- Columna Izquierda: Imagen / Muestra visual -->
+            <section class="image-preview-container">
+                <label for="imagen-seleccion">Imagen de la experiencia seleccionada:</label>
+                <figure class="ejemplo-visual">
+                    <img id="imagen-seleccion" src="assets/img/default.jpg" alt="Vista previa de la experiencia seleccionada">
+                </figure>
+            </section>
+
+            <!-- Columna Derecha: Formulario de Datos -->
+            <section class="form-data-container">
+                <fieldset>
+                    <legend>Ingreso de datos</legend>
+
+                    <div class="form-group">
+                        <label for="sltExperiencia">Nombre de la experiencia</label>
+                        <select name="experiencia" id="sltExperiencia" required>
+                            <option value="">Seleccione una experiencia</option>
+                            <option value="QST-001">QST-001 - Caminata Nocturna & Microclima</option>
+                            <option value="QST-002">QST-002 - Day Pass & Termales en La Fortuna</option>
+                            <option value="QST-003">QST-003 - Tour de Café & Cata Sensorial</option>
+                            <option value="QST-004">QST-004 - Rafting Express en el Río Pacuare</option>
+                            <option value="QST-005">QST-005 - Atardecer en Kayak & Bioluminiscencia</option>
+                            <option value="QST-006">QST-006 - Taller de Cerámica & Glamping</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtNombre">Nombre completo</label>
+                        <input type="text" id="txtNombre" name="NombreCompleto" maxlength="60" minlength="3" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email-user">Email del usuario</label>
+                        <input type="email" name="CorreoUsuario" id="email-user" placeholder="correo@gmail.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="NumTel">Telefono</label>
+                        <input type="tel" maxlength="9" minlength="8" placeholder="85457012" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="numCantidad">Cantidad de personas</label>
+                        <input type="number" id="numCantidad" name="cantidad" min="1" max="7" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dateReserva">Fecha de inicio</label>
+                        <input type="date" id="dateReserva" name="fecha" min="2026-10-11" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Información adicional</legend>
+
+                    <div class="checkbox-group">
+                        <label for="sltMenorEdad">¿Hay menores de edad?</label>
+                        <input type="checkbox" id="sltMenorEdad" name="MenorEdad">
+                    </div>
+
+                    <br>
+
+                    <div class="checkbox-group">
+                        <label for="sltTerminos">Acepto los Términos y Condiciones</label>
+                        <input type="checkbox" id="sltTerminos" name="CondicionesTerminos" required>
+                    </div>
+
+                    <br>
+
+                    <div class="form-actions">
+                        <button class="btn-principal" type="submit">
+                            Enviar reserva
+                        </button>
+
+                        <button class="btn-secundario" type="reset">
+                            Limpiar formulario
+                        </button>
+                    </div>
+                </fieldset>
+            </section>
+
+        </form>
+    </main>
+
+    <footer>
+        <div>
+            QuestPass CR · SOFT-06 Diseño y Programación Web · Avance Proyecto
+        </div>
+    </footer>
+</body>
+</html>

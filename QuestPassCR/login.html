@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Inicio de sesión para QuestPassCR">
+    <meta name="keywords" content="QuestPassCR, login, user">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn | QuestPassCR</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>QuestPass-CR</h1>
+        <nav aria-label="Navegacion inicio sesión" class="login-button">
+            <a href="login.html" class="Login">Login</a>
+        </nav>
+        <nav aria-label="Navegación principal">
+            <a href="index.html">Index</a>
+            <a href="experiencias.html">Experiencias</a>
+            <a href="reservar.html">Reservar</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="admin.html">Administración</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2 id="titulo-login">Inicio de sesión</h2>
+
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Ingreso de datos</legend>
+
+                    <div class="form-group">
+                        <label for="txt-correo">Ingrese su correo</label>
+                        <input type="email" id="txt-correo" name="correo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txt-clave">Ingrese su contraseña</label>
+                        <input type="password" id="txt-clave" name="contraseña" minlength="8" maxlength="8" placeholder="Debe tener 8 caracteres" required>
+                    </div>
+
+                    <br>
+
+                    <div class="form-actions">
+                        <button class="btn-ingreso-usuario" type="submit" formaction="index.html">
+                            Ingresar como usuario
+                        </button>
+
+                        <button class="btn-ingreso-admin" type="submit" formaction="admin.html">
+                            Ingresar como admin
+                        </button>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Problemas de acceso</legend>
+                    <div class="ayuda">
+                        <a href="nuevaclave.html">Olvidé mi contraseña</a>
+                    </div>
+                    <br>
+                    <div class="ayuda">
+                        <a href="nuevacuenta.html">No tengo cuenta</a>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            QuestPass CR · SOFT-06 Diseño y Programación Web · Avance Proyecto
+        </div>
+    </footer>
+</body>
+</html>

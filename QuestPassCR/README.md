@@ -8,9 +8,9 @@ El proyecto está construido bajo los estándares web de **HTML5 Semántico** y 
 ---
 
 ## Integrantes del Equipo
-* **Joshua Daniel Solano Masis** - Estudiante, diiseñador y programador.
-* **Alejandro Reyes Chi** - Estudiante, diiseñador y programador.
-* **Cesar Felipe Salvador Quiros** - Estudiante, diiseñador y programador.
+* **Joshua Daniel Solano Masis** - Estudiante, diseñador y programador.
+* **Alejandro Reyes Chi** - Estudiante, diseñador y programador.
+* **Cesar Felipe Salvador Quiros** - Estudiante, diseñador y programador.
 
 **Curso:** SOFT-06 - Diseño y Programación Web  
 **Institución:** Cenfotec 
